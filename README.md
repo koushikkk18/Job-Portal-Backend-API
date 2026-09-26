@@ -9,10 +9,8 @@ Use the following endpoints to interact with the backend server during testing:
 - `GET /api/auth/logout` — Destroys the active authentication cookie.
 
 ### 2. Job Seeker Endpoints (Strictly Restricted to 'seeker' Role)
-- `GET /api/seeker/profile` — Fetch your personal seeker profile and document details.
-- `PUT /api/seeker/profile` — Update your skills array, education history, and profile biography.
-- `POST /api/jobs/:id/apply` — Submit an application to a target job ID. (Prevents double applications).
-- `GET /api/seeker/applications` — View all job postings you have personally applied to.
+- `POST /ja` — Insert a new job application to a target company.
+- `DELETE /ja/:id` — Delete a specific job application by its unique database ID.
 
 ### 3. Employer Endpoints (Strictly Restricted to 'employer' Role)
 - `POST /api/jobs` — Publish a new job opening. Automatically assigns your user ID as `postedBy`.
